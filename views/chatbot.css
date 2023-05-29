@@ -32,8 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     background: #eee;
-    width: 300px;
-    height: 350px;
     z-index: -123456;
     opacity: 0;
     transition: all .5s ease-in-out;
@@ -98,7 +96,7 @@ body {
 
 .chatbox__support {
     background: #f9f9f9;
-    height: 450px;
+    height: min(50vh,450px);
     width: 350px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 20px;
@@ -197,4 +195,19 @@ body {
     border-bottom-left-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+@media only screen and (max-width:540px){
+    .chatbox {
+        position: fixed;
+        margin: auto;
+        bottom: 15px;
+        right: 15px;
+    }
+    .chatbox__support{
+        /* width:90%; */
+        height:40vh;
+        width:60vw;
+        /* margin-left: 15px; */
+    }
 }
