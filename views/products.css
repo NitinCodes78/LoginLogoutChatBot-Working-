@@ -1,0 +1,462 @@
+
+.products{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-gap:0.75rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.product{
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(220, 241, 241);
+    height:25rem;
+}
+.icon img{
+    border-radius: 50%;
+    height: 3rem;
+    width:3rem;
+    padding:3px;
+    display: none;
+    cursor: pointer;
+}
+
+.icon:hover{
+    scale: 1.5;
+
+}
+.filters{
+    display: flex;
+    justify-content: space-between;
+}
+.filter1{
+    margin-left:2vw;
+}
+.filters label{
+    font-size:1.25rem;
+    font-weight: 600;
+}
+.filters select{
+    padding:.3rem;
+}
+.filter2{
+    margin-right: 2vw;
+}
+#id-1{
+    background-image: url('https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-2{
+    background-image: url('Images/tshirt.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-3{
+    background-image: url('https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-4{
+    background-image: url('Images/dress-removebg-preview.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-5{
+    background-image: url('https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-6{
+    background-image: url('https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-7{
+    background-image: url('Images/jacket-removebg-preview.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-8{
+    background-image: url('https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-9{
+    background-image: url('Images/Dresses/dress1.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-10{
+    background-image: url('Images/Jeans/jean1.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-11{
+    background-image: url('Images/LoungeWear/lw1.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-12{
+    background-image: url('Images/Shirts/shirt1.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-13{
+    background-image: url('Images/accessories/acc1.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-14{
+    background-image: url('Images/jackets/jacket1.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-15{
+    background-image: url('Images/accessories/acc2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-16{
+    background-image: url('Images/jackets/jacket2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-17{
+    background-image: url('Images/Jeans/jean2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-18{
+    background-image: url('Images/LoungeWear/lw2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-19{
+    background-image: url('Images/Dresses/dress2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-20{
+    background-image: url('Images/Shirts/shirt2.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-21{
+    background-image: url('Images/Jeans/jean3.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-22{
+    background-image: url('Images/Jeans/jean4.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-23{
+    background-image: url('Images/Dresses/dress3.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-24{
+    background-image: url('Images/Dresses/dress4.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-25{
+    background-image: url('Images/LoungeWear/lw3.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-26{
+    background-image: url('Images/LoungeWear/lw4.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-27{
+    background-image: url('Images/Shirts/shirt3.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-28{
+    background-image: url('Images/Shirts/shirt4.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-29{
+    background-image: url('Images/accessories/acc3.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-30{
+    background-image: url('Images/accessories/acc4.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-31{
+    background-image: url('Images/jackets/jacket3.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-32{
+    background-image: url('Images/jackets/jacket4.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-33{
+    background-image: url('Images/Dresses/dress5.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-34{
+    background-image: url('Images/Dresses/dress6.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-35{
+    background-image: url('Images/Dresses/dress7.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-36{
+    background-image: url('Images/Dresses/dress8.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-37{
+    background-image: url('Images/jackets/jacket5.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-38{
+    background-image: url('Images/jackets/jacket6.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-39{
+    background-image: url('Images/jackets/jacket7.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-40{
+    background-image: url('Images/jackets/jacket8.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-41{
+    background-image: url('Images/LoungeWear/lw5.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-42{
+    background-image: url('Images/LoungeWear/lw6.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-43{
+    background-image: url('Images/LoungeWear/lw7.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-44{
+    background-image: url('Images/LoungeWear/lw8.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-45{
+    background-image: url('Images/Shirts/shirt5.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-46{
+    background-image: url('Images/Shirts/shirt6.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-47{
+    background-image: url('Images/Shirts/shirt7.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-48{
+    background-image: url('Images/Shirts/shirt8.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-49{
+    background-image: url('Images/accessories/acc5.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-50{
+    background-image: url('Images/accessories/acc6.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-51{
+    background-image: url('Images/accessories/acc7.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-52{
+    background-image: url('Images/Jeans/jean5.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-53{
+    background-image: url('Images/Jeans/jean6.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-54{
+    background-image: url('Images/Jeans/jean7.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+#id-55{
+    background-image: url('Images/Jeans/jean8.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+.price{
+     font-size:1.2rem;
+     display: none;
+     background-color: white;
+     position: absolute;
+     right:76%;
+     top:95%;
+     padding-left: 1rem;
+     padding-right: 1rem;
+}
+
+/*Responsiveness*/
+@media only screen and (max-width:1300px){
+    .filters label{
+        font-size: 1.3rem;
+    }
+    .filters select{
+        padding:.25rem .15rem;
+        font-size: 0.9rem;
+    }
+    .filter{
+        align-items: flex-start;
+        display: flex;
+        gap:0.5rem;
+        flex-direction: column;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .price{
+        font-size: 4vw;
+        position: absolute;
+        right:55%;
+        top:89%;
+        display: block;
+    }
+    .icon img{
+        border-radius: 50%;
+        height: 3.25rem;
+        width:3.25rem;
+        padding:3px;
+        display: none;
+    }
+}
+
+@media only screen and (max-width:500px ){
+    .filters label{
+        font-size:0.8rem;
+    }
+    .filters select{
+        padding:.2rem .1rem;
+        font-size: 0.7rem;
+    }
+    .filter1 label{
+        margin-left: 0rem;
+    }
+    .filter2 label{
+        margin-right:0rem;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product{
+        height: 16rem;
+    }
+    .price{
+        font-size: 4vw;
+        position: absolute;
+        right:60%;
+        top:90.5%;
+        display: block;
+    }  
+    .icon img{
+        border-radius: 50%;
+        height: 2rem;
+        width:2rem;
+        padding:3px;
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/register.css">
+    <title>SHOPHUB - LoginPage</title>
+</head>
+
+<body>
+    <nav>
+        <div class="name">SHOPHUB</div>
+        <ul class="navbar">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/login">Login</a></li>
+            <li class="nav-item"><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">REGISTER</div>
+            <div class="header-body">
+
+                <form action="/auth/register" method="POST">
+                    <label for="name"><b>Name :</b></label>
+                    <input type="text" id="name" placeholder="Enter First Name" name="name" required>
+
+                    <label for="email"><b>Email :</b></label>
+                    <input type="email" id="email" placeholder="Enter Email" name="email" required>
+
+                    <label for="password"><b>Password :</b></label>
+                    <input type="password" id="password" placeholder="Enter Password" name="password" required>
+
+                    <label for="passwordConfirm"><b>Confirm Password :</b></label>
+                    <input type="password" id="passwordConfirm" placeholder="Re-enter Password" name="passwordConfirm"
+                        required>
+
+                    <button type="submit">REGISTER USER</button>
+                </form>
+            </div>
+        </div>
+        <% if(message) %>
+          <h4 class="alert"><%= message%></h4>
+    </div>
+</body>
+</html>

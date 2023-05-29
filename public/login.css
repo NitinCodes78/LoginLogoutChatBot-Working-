@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;400;500;600&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;  
+    }
+    body{
+        font-family: 'Urbanist', sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+    }
+    
+    /* /````````````````````NAVBAR````````````````````````` */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        padding-inline: min(10rem, 10vw);
+        background-color: rgb(251, 207, 215);
+    }
+
+    nav .name{
+        font-weight: 600;
+        font-family: 2rem;
+    }
+    
+    nav ul{
+        list-style: none;
+        display: flex;
+        gap: 4vw;
+    }
+    
+    nav ul a{
+        text-decoration: none;
+        color: black;
+    }
+
+    
+    /* /````````````````````TABLET DESIGN`````````````````````````/ */
+    
+    @media only screen and (max-width : 1200px){
+    body{
+        font-size: max(1.5rem, 4vw);
+    }
+    
+    nav{
+        padding: 1rem;
+        height: auto;
+    }
+
+    } 
+    

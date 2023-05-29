@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="cart.css">
+
+    <title>ShopHub - Cart</title>
+</head>
+<body>
+    <div class="header">Free Shipping On Orders Above Rs 10000 ! </div>
+    <nav>
+        <div class="name">SHOPHUB</div>
+        <ul class="navbar">
+            <li class="nav-item cross"><img src="/images/icons/icon-close.svg" alt=""></li>
+
+            <li class="nav-item home"><a href="/"><i class="fa-solid fa-house"></i></a></i></li>
+            <li class="nav-item favourites"><a href="/wishlist"><i class="fa-solid fa-heart"></i></a></i></li>
+            <li class="nav-item nav-cart"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            
+            <% if(status=="no"){%>
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <li class="nav-item"><a href="/register">Register</a></li>
+             <% }else{%>
+                <li class="name">Welcome <%= user.name%></li>
+                <!-- Be careful that action has to be taken on logout -->
+                <li class="nav-item"><a href="/logout">Logout</a></li>
+             <% }%>
+        </ul>
+        <div class="hamburger"><img src="/images/icons/icon-menu.svg" alt=""></div>
+    </nav>
+
+    <div class="container">
+        <h1 class="heading">Your CART!</h1>
+
+        <div class="items-table">
+            <div class="cart-header">
+                <div>Product</div>
+                <div class="header-price">Price</div>
+                <div class="header-quantity">Quantity</div>
+                <div>Total Amount</div>
+            </div>
+
+            <ul class="items-list"></ul>
+
+            <div class="cart-footer">
+                <div>SUBTOTAL</div>
+                <div class="subtotal"></div>
+            </div>
+        </div>
+
+        <div class="empty-cart">
+            <h1>Your cart is empty</h1>
+            <p>Once you add something to your cart - it will appear here. Ready to get started?</p>
+            <a href="index.ejs"><div class="shop-now">EXPLORE NOW</div></a>            
+        </div>
+    </div>
+     <footer>
+        <div class="about">
+            <div class="heading">SHOPHUB - where fashion meets convenience!</div>
+            <div class="about-content">
+                From casual wear to formal attire, we have everything you need for any occasion.
+                Enjoy hassle-free shopping and fast shipping.
+                Shop with confidence on Shophub - we offer easy returns and excellent customer service.
+            </div>
+            <div class="smedia">
+                <a href=""><img src="/images/social media/instagram.png" alt=""></a>
+                <a href=""><img src="/images/social media/facebook.png" alt=""></a>
+                <a href=""><img src="/images/social media/pinterest.png" alt=""></a>
+                <a href=""><img src="/images/social media/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="heading">Useful Links</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Our Products</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/wishlist">Wishlist</a></li>
+            </ul>
+        </div>
+        <div class="contact-us">
+            <div class="heading">Contact</div>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-location-dot fa-xs"></i>
+                    622 abcd Path, South Delhi 9994 
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    92345-6789
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    shophubcontact@gmail.com
+                </li>
+            </ul>
+        </div>
+    </footer> 
+    <script src="cart.js"></script>
+    <script src="populate-cart.js"></script>
+    <script src="headerFooter.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/*````````````````MAGNIFY IMAGE`````````````````````````*/
+body{
+    position: relative;
+}
+
+.magnify{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.75);
+    z-index: 100;
+    display: none;
+}
+
+.magnify .lightbox{
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.magnify .lightbox img{
+    height: 60vh;
+}
+
+.magnify .close-lightbox img{
+    height: 2rem;
+    cursor: pointer;
+    background-color: white;
+    padding: 0.2rem  0.3rem;
+    border-radius: 0.1rem;
+}
+
+.magnify .close-lightbox img:hover{
+    scale: 1.2;
+}
+
+/*`````````````````````````````````````````````````````````````*/
+
+@media only screen and (max-width : 930px){
+
+.magnify .lightbox img{
+    width: 75vw;
+    height: auto;
+}
+
+}
+
+/*````````````SUCCESSFULLY ADDED TO CART MSG````````````````````*/
+.success-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.75);
+    z-index: 100;
+    display: none;
+}
+
+.msg-lightbox{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 45rem ;
+    text-align: left;
+    position: relative;
+    border-radius: 1rem;
+    border: 2px solid black;
+
+}
+
+.msg-lightbox .prod-img img{
+    height: 30vh;
+}
+
+.msg-lightbox .msg{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    
+}
+
+.msg-lightbox .view-cart{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.msg-lightbox a {
+    text-decoration: none;
+    color: black;
+}
+
+.msg-lightbox .view-cart:hover{
+    background-color: black;
+    color: white;
+}
+
+.success-msg .close-msg img{
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.success-msg .close-msg img:hover{
+    scale: 1.2;
+}
+
+
+/*`````````````````````````````````````````````````````````````*/
+
+@media only screen and (max-width : 770px){
+.msg-lightbox{
+    flex-direction: column;
+    width: 80vw;
+    padding: 2rem;
+    
+}
+
+.msg-lightbox .prod-img img{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+
+.msg-lightbox .msg{
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+
+.msg-lightbox .view-cart{
+    width: 100%;
+    text-align: center;
+
+}
+
+
+}

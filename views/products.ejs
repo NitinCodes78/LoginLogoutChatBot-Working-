@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="magnify.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SHOPHUB - Products</title>
+</head>
+<body>
+    <div class="header">Free Shipping On Orders Above Rs 10000 ! </div>
+    <nav>
+        <div class="name">SHOPHUB</div>
+        <ul class="navbar">
+            <li class="nav-item cross"><img src="/images/icons/icon-close.svg" alt=""></li>
+
+            <li class="nav-item home"><a href="/"><i class="fa-solid fa-house"></i></a></i></li>
+            <li class="nav-item favourites"><a href="/wishlist"><i class="fa-solid fa-heart"></i></a></i></li>
+            <li class="nav-item nav-cart"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            
+            <% if(status=="no"){%>
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <li class="nav-item"><a href="/register">Register</a></li>
+             <% }else{%>
+                <li class="name">Welcome <%= user.name%></li>
+                <!-- Be careful that action has to be taken on logout -->
+                <li class="nav-item"><a href="/logout">Logout</a></li>
+             <% }%>
+        </ul>
+        <div class="hamburger"><img src="/images/icons/icon-menu.svg" alt=""></div>
+    </nav>
+    <div class="magnify">
+        <div class="close-lightbox">
+            <img src="/Images/icons/icon-close.svg" alt="">
+        </div>
+        <div class="lightbox">
+            <img src="" alt="">
+        </div> 
+    </div>
+
+    <div class="success-msg">
+        <div class="msg-lightbox">
+            <div class="prod-img"><img src="" alt=""></div>
+            <div>
+                <div class="close-msg"><img src="/Images/icons/icon-close.svg" alt=""></div>
+                <div class="msg"> PRODUCT SUCCESFULLY ADDED TO CART !</div>
+                <a href="/cart"><div class="view-cart">VIEW CART <i class="fa-solid fa-cart-shopping"></i></div></a>
+            </div>
+        </div> 
+    </div>
+
+    <div class="filters">
+        <div class="filter1 filter">
+           <label for="color">Filter By Color:</label>
+           <select name="color" id="color">
+               <option value="all">All</option>
+               <option value="black">BLACK</option>
+               <option value="white">WHITE</option>
+               <option value="red">RED</option>
+               <option value="brown">BROWN</option>
+               <option value="grey">GREY</option>
+               <option value="yellow">YELLOW</option>
+               <option value="multicolor">MULTICOLOR</option>
+               <option value="blue">BLUE</option>
+            </select>
+        </div>
+        <div class="filter2 filter">
+            <label for="Products">Filter By Products:</label>
+            <select name="Products" id="Products">
+                <option value="Newest">NEWEST</option>
+                <option value="asc">PRICE (LOW - HIGH)</option>
+                <option value="dec">PRICE (HIGH - LOW)</option>
+            </select>
+        </div>
+    </div>
+   <div class="products">
+       <div class="product" id="id-1" data-price="2499" data-color="white" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2499</div>
+       </div>
+       <div class="product" id="id-2" data-price="2099" data-color="black" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2099</div>
+       </div>
+       <div class="product" id="id-3" data-price="3299" data-color="multicolor" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3299</div>
+       </div>
+       <div class="product" id="id-4" data-price="9999" data-color="yellow" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹9999</div>
+       </div>
+       <div class="product" id="id-5" data-price="1199" data-color="white" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1199</div>
+       </div>
+       <div class="product" id="id-6" data-price="1299" data-color="grey">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1299</div>
+       </div>
+       <div class="product" id="id-7" data-price="6299" data-color="brown" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹6299</div>
+       </div>
+       <div class="product" id="id-8" data-price="8499" data-color="brown" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹8499</div>
+       </div>
+       <div class="product" id="id-9" data-price="8599" data-color="black" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹8599</div>
+       </div>
+       <div class="product" id="id-10" data-price="3299" data-color="black" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3299</div>
+       </div>
+       <div class="product" id="id-11" data-price="2099" data-color="black" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2099</div>
+       </div>
+       <div class="product" id="id-12" data-price="3099" data-color="green" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3099</div>
+       </div>
+       <div class="product" id="id-13" data-price="1999" data-color="black" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1999</div>
+       </div>
+       <div class="product" id="id-14" data-price="6399" data-color="green" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹6399</div>
+       </div>
+       <div class="product" id="id-15" data-price="3999" data-color="black" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3999</div>
+       </div>
+       <div class="product" id="id-16" data-price="7549" data-color="brown" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹7549</div>
+       </div>
+       <div class="product" id="id-17" data-price="3349" data-color="white" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3349</div>
+       </div>
+       <div class="product" id="id-18" data-price="1999" data-color="black" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1999</div>
+       </div>
+       <div class="product" id="id-19" data-price="9549" data-color="red" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹9549</div>
+       </div>
+       <div class="product" id="id-20" data-price="2699" data-color="multicolor" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2699</div>
+       </div>
+       <div class="product" id="id-21" data-price="4699" data-color="blue" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹4699</div>
+       </div>
+       <div class="product" id="id-22" data-price="5699" data-color="black" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹5699</div>
+       </div>
+       <div class="product" id="id-23" data-price="9699" data-color="green" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹9699</div>
+       </div>
+       <div class="product" id="id-24" data-price="12699" data-color="black" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹12699</div>
+       </div>
+       <div class="product" id="id-25" data-price="1699" data-color="orange" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1699</div>
+       </div>
+       <div class="product" id="id-26" data-price="6699" data-color="black" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹6699</div>
+       </div>
+       <div class="product" id="id-27" data-price="2699" data-color="brown" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2699</div>
+       </div>
+       <div class="product" id="id-28" data-price="2649" data-color="green" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2649</div>
+       </div>
+       <div class="product" id="id-29" data-price="3999" data-color="black" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3999</div>
+       </div>
+       <div class="product" id="id-30" data-price="2949" data-color="white" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2949</div>
+       </div>
+       <div class="product" id="id-31" data-price="6699" data-color="blue" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹6699</div>
+       </div>
+       <div class="product" id="id-32" data-price="10699" data-color="red" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹10699</div>
+       </div>
+       <div class="product" id="id-33" data-price="7699" data-color="multicolor" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹7699</div>
+       </div>
+       <div class="product" id="id-34" data-price="13699" data-color="blue" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹13699</div>
+       </div>
+       <div class="product" id="id-35" data-price="11699" data-color="grey" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹11699</div>
+       </div>
+       <div class="product" id="id-36" data-price="12999" data-color="red" data-type="dress">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹12999</div>
+       </div>
+       <div class="product" id="id-37" data-price="4699" data-color="multicolor" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹4699</div>
+       </div>
+       <div class="product" id="id-38" data-price="5699" data-color="black" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹5699</div>
+       </div>
+       <div class="product" id="id-39" data-price="8699" data-color="green" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹8699</div>
+       </div>
+       <div class="product" id="id-40" data-price="5599" data-color="grey" data-type="jacket">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹5599</div>
+       </div>
+       <div class="product" id="id-41" data-price="5699" data-color="black" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹5699</div>
+       </div>
+       <div class="product" id="id-42" data-price="7999" data-color="brown" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹7999</div>
+       </div>
+       <div class="product" id="id-43" data-price="6199" data-color="multicolor" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹6199</div>
+       </div>
+       <div class="product" id="id-44" data-price="2699" data-color="multicolor" data-type="loungewear">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2699</div>
+       </div>
+       <div class="product" id="id-45" data-price="2699" data-color="yellow" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2699</div>
+       </div>
+       <div class="product" id="id-46" data-price="2399" data-color="red" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2399</div>
+       </div>
+       <div class="product" id="id-47" data-price="1999" data-color="multicolor" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1999</div>
+       </div>
+       <div class="product" id="id-48" data-price="3699" data-color="black" data-type="shirt">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3699</div>
+       </div>
+       <div class="product" id="id-49" data-price="1699" data-color="brown" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹1699</div>
+       </div>
+       <div class="product" id="id-50" data-price="999" data-color="black" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹999</div>
+       </div>
+       <div class="product" id="id-51" data-price="5999" data-color="yellow" data-type="accessories">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹5999</div>
+       </div>
+       <div class="product" id="id-52" data-price="3799" data-color="grey" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3799</div>
+       </div>
+       <div class="product" id="id-53" data-price="3999" data-color="black" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹3999</div>
+       </div>
+       <div class="product" id="id-54" data-price="2999" data-color="grey" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹2999</div>
+       </div>
+       <div class="product" id="id-55" data-price="5699" data-color="multicolor" data-type="jean">
+           <div class="cart icon">
+            <img src="images/cart.jpg">
+           </div>
+           <div class="search icon">
+            <img src="images/search.jpg">
+            </div>
+            <div class="heart icon">
+            <img src="images/black-heart.png">
+            </div>
+           <div class="price">₹5699</div>
+       </div>
+</div>
+<footer>
+    <div class="about">
+        <div class="heading">SHOPHUB - where fashion meets convenience!</div>
+        <div class="about-content">
+            From casual wear to formal attire, we have everything you need for any occasion.
+            Enjoy hassle-free shopping and fast shipping.
+            Shop with confidence on Shophub - we offer easy returns and excellent customer service.
+        </div>
+        <div class="smedia">
+            <a href=""><img src="/images/social media/instagram.png" alt=""></a>
+            <a href=""><img src="/images/social media/facebook.png" alt=""></a>
+            <a href=""><img src="/images/social media/pinterest.png" alt=""></a>
+            <a href=""><img src="/images/social media/twitter.png" alt=""></a>
+        </div>
+    </div>
+    <div class="links">
+        <div class="heading">Useful Links</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Our Products</a></li>
+            <li><a href="/cart">Cart</a></li>
+            <li><a href="/wishlist">Wishlist</a></li>
+        </ul>
+    </div>
+    <div class="contact-us">
+        <div class="heading">Contact</div>
+        <ul>
+            <li>
+                <i class="fa-solid fa-location-dot fa-xs"></i>
+                622 abcd Path, South Delhi 9994 
+            </li>
+
+            <li>
+                <i class="fa-solid fa-phone fa-xs"></i>
+                92345-6789
+            </li>
+
+            <li>
+                <i class="fa-solid fa-envelope fa-xs"></i>
+                shophubcontact@gmail.com
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="wishlist.js"></script>
+<script src="headerFooter.js"></script>
+<script src="magnify.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="magnify.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">Free Shipping On Orders Above Rs 10000 ! </div>
+    <nav>
+        <div class="name">SHOPHUB</div>
+        <ul class="navbar">
+            <li class="nav-item cross"><img src="/images/icons/icon-close.svg" alt=""></li>
+
+            <li class="nav-item home"><a href="/"><i class="fa-solid fa-house"></i></a></i></li>
+            <li class="nav-item favourites"><a href="/wishlist"><i class="fa-solid fa-heart"></i></a></i></li>
+            <li class="nav-item nav-cart"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            
+            <% if(status=="no"){%>
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <li class="nav-item"><a href="/register">Register</a></li>
+             <% }else{%>
+                <li class="name">Welcome <%= user.name%></li>
+                <!-- Be careful that action has to be taken on logout -->
+                <li class="nav-item"><a href="/logout">Logout</a></li>
+             <% }%>
+        </ul>
+        <div class="hamburger"><img src="/images/icons/icon-menu.svg" alt=""></div>
+    </nav>
+    <div class="slider">
+        <div class="slide-btns">
+            <div class="previous"><img src="/images/icons/icon-previous.svg" alt=""></div>
+            <div class="next"><img src="/images/icons/icon-next.svg" alt=""></div>
+        </div>
+        <div class="slide slide-1">
+            <div class="photo">
+                <div class="circle"></div>
+                <img src="/images/slider/1.png" alt="">
+            </div>
+            <div class="content">
+                <div class="heading">PREMIUMWEAR COLLECTION</div>
+                <div class="text-content">Embrace the luxury with our premium collection handcrafted with the 
+                    finest materials Collected from across the world
+                </div>
+                <div class="shop-btn">Shop Now</div>
+            </div>
+        </div>
+
+        <div class="slide slide-2">
+            <div class="photo">
+                <img src="/images/slider/2.png" alt="">
+            </div>
+    
+            <div class="content">
+                <div class="heading">AUTUMN COLLECTION</div>
+                <div class="text-content">Our autumn clothes collection has everything you need to stay fashionable and comfortable as the weather cools down.</div>
+                <div class="shop-btn">Shop Now</div>
+            </div>
+        </div>
+
+        <div class="slide slide-3">
+            <div class="photo">
+                <img src="/images/slider/3.png" alt="">
+            </div>
+    
+            <div class="content">
+                <div class="heading">LOUNGEWEAR LOVE</div>
+                <div class="text-content">Who says loungewear can't be stylish? Shop our loungewear clothes sale for comfy and fashionable pieces!</div>
+                <div class="shop-btn">Shop Now</div>
+            </div>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="shirtStyle catg">
+           <div class="type">SHIRT STYLE!</div>
+           <button class="shopNow">SHOP NOW</button>
+        </div>
+        <div class="loungewearLove catg">
+           <div class="type">LOUNGEWEAR LOVE</div>
+           <button class="shopNow">SHOP NOW</button>
+        </div>
+        <div class="lightJackets catg">
+            <div class="type">LIGHT JACKETS</div>
+            <button class="shopNow">SHOP NOW</button>
+        </div>
+        <div class="newDresses catg">
+            <div class="type">NEW DRESSES</div>
+            <div class="discp">Upgrade your look with our selection of must-have dresses. Choose your style, combine with dresses</div>
+            <button class="shopNow">SHOP NOW</button>
+        </div>
+        <div class="thePerfectJeans catg">
+            <div class="type">THE PERFECT JEANS!</div>
+            <div class="discp">On-trend fits and edgy details -be inspired by our selection of jeans.</div>
+            <button class="shopNow">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="products">
+        <div class="product" id="id-1" data-price="2499" data-color="white" data-type="shirt">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹2499</div>
+        </div>
+        <div class="product" id="id-2" data-price="2099" data-color="black" data-type="shirt">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹2099</div>
+        </div>
+        <div class="product" id="id-3" data-price="3299" data-color="multicolor" data-type="shirt">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹3299</div>
+        </div>
+        <div class="product" id="id-4" data-price="9999" data-color="yellow" data-type="dress">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹9999</div>
+        </div>
+        <div class="product" id="id-5" data-price="1199" data-color="white" data-type="accessories">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹1199</div>
+        </div>
+        <div class="product" id="id-6" data-price="1299" data-color="grey">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹1299</div>
+        </div>
+        <div class="product" id="id-7" data-price="6299" data-color="brown" data-type="jacket">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹6299</div>
+        </div>
+        <div class="product" id="id-8" data-price="8499" data-color="brown" data-type="dress">
+            <div class="cart icon">
+             <img src="images/cart.jpg">
+            </div>
+            <div class="search icon">
+             <img src="images/search.jpg">
+             </div>
+             <div class="heart icon">
+             <img src="images/black-heart.png">
+             </div>
+            <div class="price">₹8499</div>
+        </div>
+    </div>
+
+    <div class="magnify">
+        <div class="close-lightbox">
+            <img src="/Images/icons/icon-close.svg" alt="">
+        </div>
+        <div class="lightbox">
+            <img src="" alt="">
+        </div> 
+    </div>
+
+    <div class="success-msg">
+        <div class="msg-lightbox">
+            <div class="prod-img"><img src="" alt=""></div>
+            <div>
+                <div class="close-msg"><img src="/Images/icons/icon-close.svg" alt=""></div>
+                <div class="msg"> PRODUCT SUCCESFULLY ADDED TO CART !</div>
+                <a href="/cart"><div class="view-cart">VIEW CART <i class="fa-solid fa-cart-shopping"></i></div></a>
+            </div>
+        </div> 
+    </div>
+    
+    <div class="newsLetter">
+        <h1>Newsletter</h1>
+        <h3>Get timely updates from your favourite products</h3>
+       <div class="email">
+           <input type="email" placeholder="Your email">
+           <div class="send">
+            <img src="images/sendButt-removebg-preview.png">
+           </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="about">
+            <div class="heading">SHOPHUB - where fashion meets convenience!</div>
+            <div class="about-content">
+                From casual wear to formal attire, we have everything you need for any occasion.
+                Enjoy hassle-free shopping and fast shipping.
+                Shop with confidence on Shophub - we offer easy returns and excellent customer service.
+            </div>
+            <div class="smedia">
+                <a href=""><img src="/images/social media/instagram.png" alt=""></a>
+                <a href=""><img src="/images/social media/facebook.png" alt=""></a>
+                <a href=""><img src="/images/social media/pinterest.png" alt=""></a>
+                <a href=""><img src="/images/social media/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="heading">Useful Links</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Our Products</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/wishlist">Wishlist</a></li>
+            </ul>
+        </div>
+        <div class="contact-us">
+            <div class="heading">Contact</div>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-location-dot fa-xs"></i>
+                    622 abcd Path, South Delhi 9994 
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    92345-6789
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    shophubcontact@gmail.com
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="./Images/chatbox-icon.svg" /></button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+
+<script src="index.js"></script>
+<script src="headerFooter.js"></script>
+<script src="cart.js"></script>
+<script src="wishlist.js"></script>
+<script src="magnify.js"></script>
+
+<!-- <script src="products.js"></script> -->
+</body>
+</html>
