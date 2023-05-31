@@ -1,15 +1,31 @@
 const itemList = document.querySelector('.items-list');
 const cartTable = document.querySelector('.items-table');
 const emptycart = document.querySelector('.empty-cart');
+const payNow = document.querySelector('.pay-now');
+const payableAmt = document.querySelector('.pay-now .amount');
+const totalPayableAmt = document.querySelector('.pay-now .total-amount');
+const freeDelivery = document.querySelector('.pay-now .free-delivery');
+
+
+/*````````````````````FOR PAYMENT GATEWAY```````````````````````````*/
+let numericAmt = totalPayableAmt.textContent.slice(2);
+localStorage.setItem('PAYABLE-AMOUNT', numericAmt );
+
+document.querySelector('.paynow-btn').addEventListener('click',() => {
+    location.reload();
+})
+/*`````````````````````````````````````````````````````````````````*/
 
 function ifEmpty(){
     if(cartItems.length == 0){
         emptycart.style.display = 'flex';    
         cartTable.style.display = 'none';    
+        payNow.style.display = 'none';    
     } 
     else{
         emptycart.style.display = 'none';    
         cartTable.style.display = 'block';   
+        payNow.style.display = 'flex';   
         populateList(cartItems, itemList);
     }
 }
@@ -19,12 +35,12 @@ ifEmpty();
 function populateList(products, productList) {   //products will be an array of objects
     productList.innerHTML = products.map((product, i) => {
         return `
-        <li data-type=${product.type}>
+        <li data-id=${product.productId} data-type=${product.type} data-price=${product.price}>
             <div class="img">
                 <img src=${product.bgImgUrl} class="product-img">
                 <img src="/images/icons/icon-close.svg" class="delete">
             </div>
-            <div class="price">₹ ${product.price}</div>
+            <div class="price">$ ${product.price}</div>
             <div class = "quanSize">
                 <div class="quantity"> <input type="number" min="1" value="1"> </div>
                 <select name="size">
@@ -35,7 +51,7 @@ function populateList(products, productList) {   //products will be an array of 
                     <option value="xxl">XXL</option>
                 </select>
             </div>
-            <div class="total-amt">₹ ${product.price}</div>
+            <div class="total-amt">$ ${product.price}</div>
         </li> 
         `;
     }).join('');
@@ -45,7 +61,6 @@ function populateList(products, productList) {   //products will be an array of 
 /*````````````HIDE SIZE OPTION FOR ACCESSORIES`````````````````` */
 
 const liItems = [...document.querySelectorAll('.items-list li')] ;
-
 liItems.forEach(li =>{
     const sizeOption = li.querySelector('.quanSize select');
     if(li.dataset.type == 'accessories') sizeOption.style.display = 'none';
@@ -64,7 +79,7 @@ quanInputs.forEach(input =>{
         let price = parseInt(target.querySelector('.price').innerText.slice(2));
         let totalAmount = target.querySelector('.total-amt');        
         
-        totalAmount.innerText =  `₹ ${price * quantity}`;
+        totalAmount.innerText =  `$ ${price * quantity}`;
 
 
         computeSubtotal() 
@@ -88,8 +103,19 @@ finalPrices.forEach(price => {
 })
 
 const numericSubtotal = numericPrices.reduce((sum,price)=> sum+price);
-subtotal.innerText =  `₹ ${numericSubtotal}`;
+subtotal.textContent =  `$ ${numericSubtotal}`;
+payableAmt.textContent =  `$ ${numericSubtotal}`;
 
+if(numericSubtotal >10000){
+    freeDelivery.textContent = '- $50';
+    totalPayableAmt.textContent =  `$ ${numericSubtotal}`;
+}
+else{
+    freeDelivery.textContent = 'N.A.';
+    totalPayableAmt.textContent =  `$ ${numericSubtotal +50}`;
+}
+numericAmt = totalPayableAmt.textContent.slice(2);
+localStorage.setItem('PAYABLE-AMOUNT', numericAmt );
 }
 computeSubtotal()
 
@@ -103,6 +129,7 @@ function removeItem(e){
         });
         cartItems.splice(removeIndex,1);
         localStorage.setItem('CART-ITEMS', JSON.stringify(cartItems));
+
         
         populateList(cartItems,itemList);
         finalPrices=[...document.querySelectorAll('.total-amt')];
@@ -125,7 +152,4 @@ function removeItem(e){
     removeArray.forEach(remove => {
          remove.addEventListener("click", removeItem);
     });
-
-
-
 
