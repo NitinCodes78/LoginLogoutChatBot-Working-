@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="payment.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=Ac4xnp4geee0PIK5pgZruEsZUTHYRMR68nU_vx6kO7Hg9LdewPjJI_L886ILJ8b2O2rFYUD71-Io2D5a"></script>
+    <title>Shophub - Payment</title>
+</head>
+<body>
+    <div class="header">Free Shipping On Orders Above $ 10000 ! </div>
+    <nav>
+        <div class="name">SHOPHUB</div>
+
+        <ul class="navbar">
+            <li class="nav-item cross"><img src="/images/icons/icon-close.svg" alt=""></li>
+            <li class="nav-item">Register</li>
+            <li class="nav-item">Sign-in</li>
+            <li class="nav-item home"><a href="index.html"><i class="fa-solid fa-house"></i></a></i></li>
+            <li class="nav-item favourites"><a href="wishlist.html"> <i class="fa-solid fa-heart"></i></a></li>
+            <li class="nav-item nav-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+        <div class="hamburger"><img src="/images/icons/icon-menu.svg" alt=""></div>
+    </nav>
+
+    <div class="container">
+        <div class="payment-heading">Total Payable Amount: <span></span></div>
+        <div class="choose">Choose Payment Method :</div>
+        <div id="paypal-button"></div>
+    </div>
+
+    <footer>
+        <div class="about">
+            <div class="heading">SHOPHUB - where fashion meets convenience!</div>
+            <div class="about-content">
+                From casual wear to formal attire, we have everything you need for any occasion.
+                Enjoy hassle-free shopping and fast shipping.
+                Shop with confidence on Shophub - we offer easy returns and excellent customer service.
+            </div>
+            <div class="smedia">
+                <a href=""><img src="/images/social media/instagram.png" alt=""></a>
+                <a href=""><img src="/images/social media/facebook.png" alt=""></a>
+                <a href=""><img src="/images/social media/pinterest.png" alt=""></a>
+                <a href=""><img src="/images/social media/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="heading">Useful Links</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+            </ul>
+        </div>
+        <div class="contact-us">
+            <div class="heading">Contact</div>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-location-dot fa-xs"></i>
+                    622 abcd Path, South Delhi 9994 
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    92345-6789
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    shophubcontact@gmail.com
+                </li>
+            </ul>
+        </div>
+    </footer> 
+    
+    <script src="payment.js"></script>
+    <script src="headerFooter.js"></script>
+    <script src="mongodb.js"></script>
+</body>
+</html>
