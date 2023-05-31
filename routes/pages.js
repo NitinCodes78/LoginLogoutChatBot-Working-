@@ -32,6 +32,13 @@ router.get("/wishlist", loggedIn, (req, res) => { //In loggedIn, we have written
         res.render('wishlist', {status: "no", user: "nothing"});
     }
 })
+router.get("/payment", loggedIn, (req, res) => { //In loggedIn, we have written the code that if user is loggedIn, req.user=result[0];
+    if(req.user){
+        res.render('payment', {status:"loggedIn", user: req.user}); //We can write status anything, it's just random string we can write like "meowww", this status we have used in index.hbs
+    }else{
+        res.render('payment', {status: "no", user: "nothing"});
+    }
+})
 
 router.get("/login", (req,res)=>{
      res.render('login', {message:""});
