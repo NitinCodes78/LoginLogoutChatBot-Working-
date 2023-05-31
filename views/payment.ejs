@@ -18,11 +18,18 @@
 
         <ul class="navbar">
             <li class="nav-item cross"><img src="/images/icons/icon-close.svg" alt=""></li>
-            <li class="nav-item">Register</li>
-            <li class="nav-item">Sign-in</li>
-            <li class="nav-item home"><a href="index.html"><i class="fa-solid fa-house"></i></a></i></li>
-            <li class="nav-item favourites"><a href="wishlist.html"> <i class="fa-solid fa-heart"></i></a></li>
-            <li class="nav-item nav-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li class="nav-item home"><a href="/index"><i class="fa-solid fa-house"></i></a></i></li>
+            <li class="nav-item favourites"><a href="/wishlist"> <i class="fa-solid fa-heart"></i></a></li>
+            <li class="nav-item nav-cart"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+            <% if(status=="no"){%>
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <li class="nav-item"><a href="/register">Register</a></li>
+             <% }else{%>
+                <li class="name">Welcome <%= user.name%></li>
+                <!-- Be careful that action has to be taken on logout -->
+                <li class="nav-item"><a href="/logout">Logout</a></li>
+             <% }%>
         </ul>
         <div class="hamburger"><img src="/images/icons/icon-menu.svg" alt=""></div>
     </nav>
