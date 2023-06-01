@@ -9,11 +9,12 @@
 }
 
 .card{
-    background-color: antiquewhite;
+    background-color: #e9f6f7;
     width: 60%;
 }
 .card-header{
-    background-color: rgb(211, 169, 114);
+    color:white;
+    background-color: #0E8388;
     padding: 1rem;
 }
 

@@ -10,19 +10,23 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/login.css">
     <link rel="stylesheet" href="/register.css">
+    <link rel="stylesheet" href="headerFooter.css">
     <title>SHOPHUB - LoginPage</title>
 </head>
 
 <body>
+    <div class="header">Free Shipping On Orders Above Rs 10000 ! </div>
     <nav>
         <div class="name">SHOPHUB</div>
         <ul class="navbar">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/login">Login</a></li>
-            <li class="nav-item"><a href="/register">Register</a></li>
-        </ul>
-    </nav>
+            <li class="nav-item cross"><img src="/images/icons/icon-close.svg" alt=""></li>
 
+            <li class="nav-item home"><a href="/"><i class="fa-solid fa-house"></i></a></i></li>           
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <li class="nav-item"><a href="/register">Register</a></li>
+        </ul>
+        <div class="hamburger"><img src="/images/icons/icon-menu.svg" alt=""></div>
+    </nav>
     <div class="container">
         <div class="card">
             <div class="card-header">REGISTER</div>
@@ -49,5 +53,49 @@
         <% if(message) %>
           <h4 class="alert"><%= message%></h4>
     </div>
+    <footer>
+        <div class="about">
+            <div class="heading">SHOPHUB - where fashion meets convenience!</div>
+            <div class="about-content">
+                From casual wear to formal attire, we have everything you need for any occasion.
+                Enjoy hassle-free shopping and fast shipping.
+                Shop with confidence on Shophub - we offer easy returns and excellent customer service.
+            </div>
+            <div class="smedia">
+                <a href=""><img src="/images/social media/instagram.png" alt=""></a>
+                <a href=""><img src="/images/social media/facebook.png" alt=""></a>
+                <a href=""><img src="/images/social media/pinterest.png" alt=""></a>
+                <a href=""><img src="/images/social media/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="heading">Useful Links</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Our Products</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/wishlist">Wishlist</a></li>
+            </ul>
+        </div>
+        <div class="contact-us">
+            <div class="heading">Contact</div>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-location-dot fa-xs"></i>
+                    622 abcd Path, South Delhi 9994 
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-phone fa-xs"></i>
+                    92345-6789
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope fa-xs"></i>
+                    shophubcontact@gmail.com
+                </li>
+            </ul>
+        </div>
+    </footer> 
 </body>
 </html>
