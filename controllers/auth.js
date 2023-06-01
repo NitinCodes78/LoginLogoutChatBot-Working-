@@ -36,7 +36,7 @@ exports.register = (req, res) =>{
                 console.log(error);
             } else{
                 console.log(results);
-                res.redirect('/login');
+                // res.redirect('/login');
                 // return res.render('register',{
                 //     message :'User registered!'
                 // })
