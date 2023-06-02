@@ -10,6 +10,9 @@
         font-weight: 300;
         text-align: center;
     }
+    .container{
+        height: 60vh !important;
+    }
     
     /* /````````````````````TABLET DESIGN`````````````````````````/ */
     
