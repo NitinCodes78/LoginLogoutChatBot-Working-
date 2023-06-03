@@ -42,6 +42,6 @@ app.set("views", "./views");
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
 app.use('/signIn',require('./routes/signIn'));
-app.listen(5040,() => {
-    console.log("Server started at 5040");
+app.listen(5050,() => {
+    console.log("Server started at 5050");
 })

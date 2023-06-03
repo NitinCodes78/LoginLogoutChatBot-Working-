@@ -10,6 +10,10 @@
         font-weight: 300;
         text-align: center;
     }
+
+    nav, footer{
+        background-color:#e9f6f7 ;
+    }
 .container{
     display: flex;
     flex-direction: column;
@@ -23,11 +27,13 @@
 .card{
     background-color: #e9f6f7;
     width: 60%;
+    border-radius: 1rem;
 }
 .card-header{
     color:white;
     background-color: #0E8388;
     padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .header-body{
