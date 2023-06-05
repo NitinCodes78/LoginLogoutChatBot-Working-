@@ -92,7 +92,8 @@
 
 .chatbox__support {
     background: #f9f9f9;
-    height: min(50vh,450px);
+    /* height: min(50vh,450px); */
+    height: 60vh;
     width: 350px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
